@@ -55,13 +55,14 @@ function images() {
 
 function styles() {
   return src('app/scss/style.scss')
+    .pipe(scss({ outputStyle: 'compressed' }))
     .pipe(autoprefixer({
-      overrideBrowserslist: ['last 10 versions']
+      overrideBrowserslist: ['last 10 versions'],
+      cascade: false
     }))
     .pipe(concat('style.min.css'))
-    .pipe(scss({ style: 'compressed' }))
     .pipe(dest('app/css'))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream());
 }
 
 function scripts() {
@@ -81,7 +82,7 @@ function watching() {
       baseDir: 'app/'
     }
   });
-  watch(['app/scss/style.scss'], styles)
+  watch(['app/scss/*.scss'], styles)
   watch(['app/images/src'], images)
   watch(['app/images/sprite'], sprites)
   watch(['app/pages/*', 'app/components/*'], pages)
