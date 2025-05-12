@@ -10,6 +10,14 @@ body {
    color: vars.$color-accent;
 }
 
+.promo {
+   background-color: vars.$bg-primary;
+   padding: 7px 0 9px;
+   font-size: 11px;
+   text-transform: uppercase;
+   text-align: center;
+}
+
 .header {
 
    padding: 20px 0 30px;
@@ -57,6 +65,37 @@ body {
    }
 }
 
+.top {
+   min-height: 90vh;
+   background-repeat: no-repeat;
+   background-size: cover;
+
+   &__inner {
+      display: flex;
+      flex-direction: column;
+      padding: 115px 0 50px;
+      margin-right: 134px;
+      margin-left: auto;
+      max-width: 446px;
+   }
+
+   &__title {
+      @extend %lora-400;
+      font-size: 80px;
+      line-height: 1.2;
+      margin-bottom: 60px;
+   }
+
+   &__link {
+      color: #fff;
+      padding: 12px 38px;
+      display: inline-block;
+      border-radius: 3px;
+      background-color: vars.$color-accent;
+      text-transform: uppercase;
+      align-self: start;
+   }
+}
 
 
 
@@ -66,6 +105,11 @@ body {
 .footer {
    font-size: 16px;
    color: vars.$color-text-muted;
+
+   &__logo {
+      margin-left: -25px;
+      margin-right: -25px;
+   }
 
    &__menu {
       padding: 55px 0 44px;
@@ -154,8 +198,9 @@ body {
       gap: 0 37px;
    }
 
-   &__bottom-item + .footer__bottom-item {
+   &__bottom-item+.footer__bottom-item {
       position: relative;
+
       &::before {
          content: '|';
          position: absolute;
