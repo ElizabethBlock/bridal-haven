@@ -66,14 +66,14 @@ body {
 }
 
 .top {
-   min-height: 90vh;
+   min-height: 95vh;
    background-repeat: no-repeat;
    background-size: cover;
 
    &__inner {
       display: flex;
       flex-direction: column;
-      padding: 115px 0 50px;
+      padding: 135px 0 50px;
       margin-right: 134px;
       margin-left: auto;
       max-width: 446px;
@@ -83,7 +83,7 @@ body {
       @extend %lora-400;
       font-size: 80px;
       line-height: 1.2;
-      margin-bottom: 60px;
+      margin-bottom: 70px;
    }
 
    &__link {
@@ -98,9 +98,72 @@ body {
 }
 
 
+.new-collection {
+   background-image: url(../images/top-decor.svg);
+   background-repeat: no-repeat;
+   background-position: 240px -40%;
 
 
+   &__inner {
+      display: flex;
+      padding: 150px 0;
+   }
 
+   &__content {
+      display: flex;
+      flex-direction: column;
+      padding: 75px 40px 0 40px;
+      max-width: 492px;
+
+   }
+
+   &__title {
+      @extend %lora-400;
+      font-size: 45px;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+   }
+
+   &__text {
+      color: vars.$color-text-muted;
+      padding-bottom: 20px;
+   }
+
+   &__link {
+      margin-top: auto;
+      font-size: 16px;
+      color: vars.$color-text-muted;
+      padding: 10px 65px;
+      border: 1px solid vars.$bg-primary;
+      align-self: start;
+      margin-top: 70px;
+   }
+
+   &__img {
+      padding-top: 75px;
+   }
+
+   &__box {
+      position: relative;
+      display: flex;
+      padding-left: 40px;
+      padding-right: 40px;
+   }
+
+   &__box-img {
+      position: absolute;
+      top: 0;
+      left: -75px;
+      max-width: fit-content;
+   }
+
+   &__caption {
+      margin-top: auto;
+      margin-bottom: 40px;
+      width: 290px;
+      color: vars.$color-text-muted;
+   }
+}
 
 .footer {
    font-size: 16px;
