@@ -222,15 +222,68 @@ body {
       cursor: pointer;
    }
 
-   &__form-caption {
+   &__caption {
       color: vars.$color-primary;
       font-size: 11px;
       line-height: 1.3;
    }
-
 }
 
+.designer {
+   margin-bottom: 210px;
 
+   &__inner {
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__content {
+      max-width: 404px;
+   }
+
+   &__title {
+      @extend %lora-400;
+      font-size: 45px;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+   }
+
+   &__text {
+      font-size: 16px;
+      color: vars.$color-text-muted;
+      margin-bottom: 20px;
+   }
+
+   &__box {
+      text-align: center;
+      position: relative;
+   }
+
+   &__img {
+      margin-bottom: 30px;
+   }
+
+   &__caption {
+      position: absolute;
+      top: 180px;
+      left: -160px;
+      padding: 20px 18px;
+      width: 303px;
+      @extend %lora-400;
+      border: 3px solid vars.$bg-primary;
+      text-align: left;
+      background-color: #ffffffe3;
+      color: vars.$color-primary;
+   }
+
+   &__link {
+      font-size: 16px;
+      color: vars.$color-text-muted;
+      padding: 10px 93px;
+      border: 1px solid vars.$color-text-muted;
+   }
+}
 
 .footer {
    font-size: 16px;
