@@ -460,7 +460,8 @@ body {
       padding-top: 5px;
       margin-bottom: 15px;
       background-color: transparent;
-      &::placeholder{
+
+      &::placeholder {
          color: vars.$color-text-muted;
       }
    }
@@ -474,6 +475,78 @@ body {
       border: none;
       cursor: pointer;
       padding: 12px;
+   }
+}
+
+
+.page-404 {
+
+   &__container {
+      max-width: 1562px;
+      padding: 0 10px;
+      margin: 0 auto;
+   }
+
+   &__inner {
+      display: flex;
+   }
+
+   &__content {
+      @extend %lora-400;
+      width: 731px;
+      margin: 205px 14px 0 35px;
+   }
+
+   &__title {
+      font-size: 160px;
+      margin-bottom: 60px;
+   }
+
+   &__link {
+      font-size: 48px;
+      display: flex;
+      align-items: flex-end;
+      gap: 20px;
+
+      span {
+         display: inline-block;
+         width: 600px;
+         text-transform: uppercase;
+      }
+   }
+
+   &__img-2 {
+      margin-top: 30px;
+   }
+}
+
+.moving {
+
+   overflow: hidden;
+
+   &__text {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      white-space: nowrap;
+      opacity: .2;
+      @extend %lora-400;
+      font-size: 160px;
+      text-transform: uppercase;
+      animation-name: moving;
+      animation-duration: 8s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+   }
+}
+
+@keyframes moving {
+   0% {
+      transform: translateX(0%);
+   }
+
+   100% {
+      transform: translateX(-100%);
    }
 }
 
