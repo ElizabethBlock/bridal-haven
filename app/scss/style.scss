@@ -668,8 +668,6 @@ body {
 
    }
 
-   &__img {}
-
    &__like {
       position: absolute;
       top: 10px;
@@ -701,8 +699,7 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
-   gap: 2px;
-   
+
    &__list {
       display: flex;
       justify-content: center;
@@ -723,20 +720,9 @@ body {
          color: #fff;
          background-color: vars.$color-text-muted;
       }
+
    }
 
-   &__arrow {
-      width: 43px;
-      height: 43px;
-      display: inline-block;
-      justify-content: center;
-      align-items: center;
-   }
-   
-   &--disabled {
-      display: none;
-   }
-   
 }
 
 .pagination__arrow {
@@ -745,6 +731,11 @@ body {
    align-items: center;
    width: 43px;
    height: 43px;
+
+   &--disabled {
+      display: none;
+   }
+
 }
 
 .footer {
