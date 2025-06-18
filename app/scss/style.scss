@@ -1282,6 +1282,157 @@ body {
    }
 }
 
+.reviews-top {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 60px;
+   margin-top: 40px;
+
+   &__title {
+      font-size: 64px;
+      @extend %lora-400;
+   }
+
+   &__link {
+      font-size: 24px;
+      color: rgba($color: vars.$color-accent, $alpha: 0.4);
+      border-bottom: 1px solid vars.$color-accent;
+   }
+}
+
+.reviews-slider {
+   margin-bottom: 25px;
+overflow: hidden;
+width: calc(100vw - (100vw - 1500px) / 2);
+
+   &__wrapper {}
+
+   &__item {}
+}
+
+
+.reviews-rating {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+
+   &__list {
+      display: flex;
+      align-items: center;
+   }
+
+   &__item {
+      display: flex;
+      align-items: center;
+   }
+
+   &__link {
+      margin-left: 10px;
+      font-size: 16px;
+      color: rgba($color: vars.$color-accent, $alpha: 0.4);
+      border-bottom: 1px solid vars.$color-accent;
+   }
+}
+
+.reviews__nav {
+   position: absolute;
+   max-width: 1520px;
+   left: 0;
+   right: 0;
+   margin: 0 auto;
+}
+
+.reviews-slider-arrow {
+   position: absolute;
+   top: 24px;
+   cursor: pointer;
+}
+
+.reviews-slider-prev {
+   right: 158px;
+}
+
+.reviews-slider-next {
+   right: 0;
+}
+
+.reviews-slider-pagination {
+   position: absolute;
+   font-size: 18px;
+   right: 47px;
+   color: rgba($color: vars.$color-accent, $alpha: 0.3);
+   left: auto;
+   width: auto;
+   top: 25px;
+   .swiper-pagination-current {
+      padding-right: 15px;
+      color: vars.$color-accent;
+   }
+   .swiper-pagination-total {
+      padding-left: 15px;
+   }
+}
+
+
+.reviews-new {
+   display: inline-block;
+   padding: 24px 40px;
+   margin-top: 24px;
+   margin-bottom: 60px;
+   text-transform: uppercase;
+   border: 1px solid vars.$color-accent;
+   font-size: 16px;
+}
+
+.reviews {
+
+   &__items {}
+
+   &__item {
+      margin-top: 20px;
+      border: 1px solid #dcddde;
+      padding: 40px 50px;
+   }
+
+   &__item-date {
+      font-size: 14px;
+      opacity: 0.4;
+      margin-bottom: 16px;
+   }
+
+   &__item-name-img {
+      object-fit: cover;
+      border-radius: 50%;
+   }
+
+   &__item-images {
+      margin-top: 24px;
+      display: flex;
+      gap: 10px;
+
+      img {
+         object-fit: cover;
+      }
+   }
+}
+
+.reviews-item {
+
+   &__name {
+      display: flex;
+      align-items: center;
+      margin-top: 18px;
+      margin-bottom: 24px;
+      gap: 12px;
+   }
+
+   &__text {
+      max-width: 1220px;
+   }
+}
+
+
 .footer {
    font-size: 16px;
    color: vars.$color-text-muted;
